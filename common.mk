@@ -532,10 +532,6 @@ PRODUCT_PACKAGES += \
     DeviceSettings \
     tri-state-key_daemon.vendor
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # FOD
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
