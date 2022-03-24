@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2022 The Evolution X Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -204,7 +205,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
-CUSTOM_APNS_FILE := $(COMMON_PATH)/configs/apns-conf.xml
+CUSTOM_APNS_FILE := $(COMMON_PATH)/configs/apn/apns-conf.xml
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level

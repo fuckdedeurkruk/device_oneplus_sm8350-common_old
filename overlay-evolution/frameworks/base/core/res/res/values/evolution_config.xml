@@ -88,4 +88,7 @@
 
     <!-- Exempt cne from privacy (location) indicators -->
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+    
+    <!-- Whether device has screen with higher aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">true</bool>
 </resources>
