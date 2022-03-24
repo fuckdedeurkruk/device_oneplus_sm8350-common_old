@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2014-2015 The CyanogenMod Project
-     Copyright (C) 2018 The LineageOS Project
+     Copyright (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,36 +16,47 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
           package="org.lineageos.device.DeviceSettings"
-          android:versionCode="1"
-          android:versionName="1.0" >
+          android:versionCode="2"
+          android:versionName="2.0" >
 
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
-    <protected-broadcast android:name="org.lineageos.device.DeviceSettings.UPDATE_SLIDER_SETTINGS" />
-    <protected-broadcast android:name="org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
         android:minSdkVersion="28"
         android:targetSdkVersion="29" />
 
     <application
-        android:icon="@drawable/ic_settings_device"
+        android:icon="@drawable/ic_logo"
         android:label="@string/device_title"
+        android:theme="@style/Theme.SubSettingsBase"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
-        <!-- Device Settings -->
+        <receiver 
+            android:name=".Startup" 
+            android:defaultToDeviceProtectedStorage="true"
+            android:directBootAware="true"
+            android:enabled="true">
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".DeviceSettings" />
+        <activity android:name=".KeyHandler" />
+
+        <!-- DeviceSettings Activity -->
         <activity
             android:name=".DeviceSettingsActivity"
-            android:label="@string/device_title"
-            android:theme="@style/Theme.SubSettingsBase"
-            android:exported="true">
+            android:label="@string/device_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -55,23 +66,137 @@
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.homepage" />
-            <meta-data
-                android:name="com.android.settings.bg.hint"
-                android:resource="@color/settings_background" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/device_summary" />
         </activity>
 
-        <activity android:name=".DeviceSettings" />
-        <activity android:name=".KeyHandler" />
-
-        <receiver android:name=".Startup" >
+        <!-- DeviceSettings Tile Service -->
+        <service
+            android:name=".Services.DeviceSettingsTileService"
+            android:icon="@drawable/ic_settings_device_qs"
+            android:label="@string/device_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </receiver>
+        </service>
 
-        <!-- Search Provider -->
+        <!-- DC-Dimming Tile -->
+        <service
+            android:name=".Services.DCModeTileService"
+            android:icon="@drawable/ic_dimming_off"
+            android:label="@string/tile_dc_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- DozeSettings Activity -->
+        <activity
+            android:name=".Doze.DozeSettingsActivity"
+            android:exported="true"
+            android:label="@string/ambient_display_title"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Doze Service -->
+		<service android:name=".Doze.DozeService"
+                 android:permission="OneplusDozeService">
+        </service>
+
+        <!-- DozeSettings Tile Service -->
+         <service
+            android:name=".Doze.DozeTileService"
+            android:icon="@drawable/ic_eye"
+            android:label="@string/ambient_display_gestures_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- HBM Tile Service -->
+        <service
+            android:name=".Services.HBMModeTileService"
+            android:icon="@drawable/ic_hbm_mode"
+            android:label="@string/tile_hbm_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- HBM Service -->
+        <service android:name=".Services.HBMModeService"
+            android:exported="false" />
+
+        <!-- Auto HBM Service -->
+        <service android:name=".Services.AutoHBMService"
+		 android:exported="false" />
+
+        <!-- FPS Info Service -->
+        <service android:name=".Services.FPSInfoService"
+                android:exported="false">
+        </service>
+
+        <!-- FPS Tile Service -->
+        <service
+            android:name=".Services.FPSTileService"
+            android:icon="@drawable/ic_fps_overlay"
+            android:label="@string/fps_info_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- Game Mode Tile Service -->
+        <service
+            android:name=".Services.GameModeTileService"
+            android:icon="@drawable/ic_game_mode"
+            android:label="@string/game_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- Log Tile Service -->
+        <service
+            android:name=".Services.LogTileService"
+            android:icon="@drawable/ic_logtile"
+            android:label="@string/quick_settings_log_tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- Edge Touch Tile Service -->
+        <service
+            android:name=".Services.EdgeTouchTileService"
+            android:icon="@drawable/ic_edge_touch"
+            android:label="@string/edge_touch_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <!-- Search Indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
             android:authorities="org.lineageos.device"
@@ -80,7 +205,8 @@
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+                <action 
+                    android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
             </intent-filter>
         </provider>
     </application>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2017-2021 crDroid Android Project
+<!-- Copyright (C) 2014-2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,6 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,24 +24,7 @@
     android:background="?android:attr/activatedBackgroundIndicator"
     android:clipToPadding="false">
 
-    <LinearLayout
-        android:id="@android:id/icon_frame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-4dp"
-        android:minWidth="60dp"
-        android:gravity="start|center_vertical"
-        android:orientation="horizontal"
-        android:paddingEnd="12dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp">
-        <com.android.internal.widget.PreferenceImageView
-            android:id="@android:id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="48dp"
-            android:maxHeight="48dp" />
-    </LinearLayout>
+    <include layout="@layout/settingslib_icon_frame"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -73,6 +56,7 @@
             android:id="@+id/value_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
             android:layout_below="@android:id/summary"
             android:layout_alignStart="@android:id/title" >
 
@@ -95,7 +79,6 @@
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@id/value"
                 android:layout_centerVertical="true" />
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -126,6 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginBottom="2dp"
                 android:layout_toEndOf="@id/minus"
                 android:layout_toStartOf="@id/plus"
                 android:layout_centerVertical="true" />
@@ -133,7 +117,8 @@
     </RelativeLayout>
 
     <!-- Preference should place its actual preference widget here. -->
-    <LinearLayout android:id="@android:id/widget_frame"
+    <LinearLayout 
+        android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="end|center_vertical"
