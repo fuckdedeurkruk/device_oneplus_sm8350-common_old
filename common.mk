@@ -211,6 +211,17 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+ifeq ($(WITH_GAPPS), true)
+# Google Camera
+RELAX_USES_LIBRARY_CHECK := true
+PRODUCT_PACKAGES += \
+    Gcam
+endif
+
+# Charge control
+PRODUCT_PACKAGES += \
+    vendor.lineage.chgctrl@1.0-service.oneplus_lahaina
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
