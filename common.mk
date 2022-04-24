@@ -29,9 +29,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Inherit OnePlusCamera from vendor/oneplus/addons/camera
-$(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sm8350-common/sm8350-common-vendor.mk)
 
@@ -333,8 +330,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oneplus \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor 
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
