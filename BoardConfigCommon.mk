@@ -14,16 +14,19 @@
 # limitations under the License.
 #
 
+BOARD_VENDOR := oneplus
+
+COMMON_PATH := device/oneplus/sm8350-common
+
+# Hacks
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-SELINUX_IGNORE_NEVERALLOWS := true
 RELAX_USES_LIBRARY_CHECK := true
 
-BOARD_VENDOR := oneplus
-
-COMMON_PATH := device/oneplus/sm8350-common
+# Selinux
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Architecture
 TARGET_ARCH := arm64
