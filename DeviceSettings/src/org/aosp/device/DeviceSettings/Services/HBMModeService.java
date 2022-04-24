@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2020 Yet Another lineageos Project
+* Copyright (C) 2020 Yet Another AOSP Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -24,8 +24,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import org.lineageos.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 public class HBMModeService extends Service {
 

@@ -6,3 +6,6 @@ allow untrusted_app_29 tmpfs:file {read write open };
 allow untrusted_app_29 sysfs:dir {search};
 allow untrusted_app_29 app_data_file:file { execute };
 get_prop(untrusted_app_29, vendor_persist_camera_prop)
+
+allow untrusted_app_29 window_service:service_manager find;
+allow untrusted_app_29 zygote:unix_stream_socket getopt;

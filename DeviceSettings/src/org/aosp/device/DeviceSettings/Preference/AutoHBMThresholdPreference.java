@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Preference;
+package org.aosp.device.DeviceSettings.Preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -23,8 +23,8 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.device.DeviceSettings.DeviceSettings;
-import org.lineageos.device.DeviceSettings.Preference.CustomSeekBarPreference;
+import org.aosp.device.DeviceSettings.DeviceSettings;
+import org.aosp.device.DeviceSettings.Preference.CustomSeekBarPreference;
 
 public class AutoHBMThresholdPreference extends CustomSeekBarPreference {
 

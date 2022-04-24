@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.device.DeviceSettings.Utils;
+package org.aosp.device.DeviceSettings.Utils;
 
 import android.content.Context;
 import android.os.VibrationEffect;

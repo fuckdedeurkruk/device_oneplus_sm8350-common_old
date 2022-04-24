@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/org.lineageos.device.DeviceSettings"
+	xmlns:settings="http://schemas.android.com/apk/res/org.aosp.device.DeviceSettings"
         android:title="@string/ambient_display_title">
 
     <com.android.settingslib.widget.MainSwitchPreference
@@ -24,7 +24,7 @@
         android:key="doze_enable"
         android:title="@string/ambient_enable" />
 
-    <org.lineageos.device.DeviceSettings.Preference.SwitchPreference
+    <org.aosp.device.DeviceSettings.Preference.SwitchPreference
         android:key="always_on_display"
         android:disableDependentsState="true"
         android:icon="@drawable/ic_eye"
@@ -50,7 +50,7 @@
         android:key="proximity_sensor"
         android:title="@string/proximity_sensor_title">
 
-        <org.lineageos.device.DeviceSettings.Preference.SwitchPreference
+        <org.aosp.device.DeviceSettings.Preference.SwitchPreference
             android:key="gesture_pocket"
             android:defaultValue="false"
             android:icon="@drawable/ic_pocket"

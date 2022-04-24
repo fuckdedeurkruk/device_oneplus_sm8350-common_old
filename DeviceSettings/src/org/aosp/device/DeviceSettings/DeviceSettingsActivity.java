@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings;
+package org.aosp.device.DeviceSettings;
 
 import android.app.Fragment;
 import android.os.Bundle;

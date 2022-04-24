@@ -17,7 +17,7 @@
 *
 */
 
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.content.Context;
 import android.media.AudioManager;

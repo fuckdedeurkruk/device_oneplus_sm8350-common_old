@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.device.DeviceSettings.Doze;
+package org.aosp.device.DeviceSettings.Doze;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -36,8 +36,8 @@ import androidx.preference.PreferenceFragment;
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
-import org.lineageos.device.DeviceSettings.Preference.SwitchPreference;
-import org.lineageos.device.DeviceSettings.R;
+import org.aosp.device.DeviceSettings.Preference.SwitchPreference;
+import org.aosp.device.DeviceSettings.R;
 
 public class DozeSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener,
         OnMainSwitchChangeListener {

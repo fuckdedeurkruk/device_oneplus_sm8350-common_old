@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The lineageos-OS Project
+ * Copyright (C) 2021 The aosp-OS Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package org.lineageos.device.DeviceSettings.Preference;
+package org.aosp.device.DeviceSettings.Preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -23,8 +23,8 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
-import org.lineageos.device.DeviceSettings.Preference.CustomSeekBarPreference;
-import org.lineageos.device.DeviceSettings.R;
+import org.aosp.device.DeviceSettings.Preference.CustomSeekBarPreference;
+import org.aosp.device.DeviceSettings.R;
 
 public class VibratorStrengthPreference extends CustomSeekBarPreference {
 

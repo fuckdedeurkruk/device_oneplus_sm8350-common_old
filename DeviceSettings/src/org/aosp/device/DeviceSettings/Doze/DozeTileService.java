@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Doze;
+package org.aosp.device.DeviceSettings.Doze;
 
 import android.annotation.TargetApi;
 import android.content.Intent;

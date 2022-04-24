@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

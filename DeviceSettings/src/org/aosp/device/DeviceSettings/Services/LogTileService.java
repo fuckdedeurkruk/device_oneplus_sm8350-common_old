@@ -1,4 +1,4 @@
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
@@ -13,8 +13,8 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
-import org.lineageos.device.DeviceSettings.R;
-import org.lineageos.device.DeviceSettings.SuShell;
+import org.aosp.device.DeviceSettings.R;
+import org.aosp.device.DeviceSettings.SuShell;
 
 @TargetApi(24)
 public class LogTileService extends TileService {

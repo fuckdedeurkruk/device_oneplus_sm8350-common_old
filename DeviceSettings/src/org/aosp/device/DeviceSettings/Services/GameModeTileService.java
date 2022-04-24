@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.annotation.TargetApi;
 import android.content.SharedPreferences;
@@ -23,9 +23,9 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.device.DeviceSettings.DeviceSettings;
-import org.lineageos.device.DeviceSettings.ModeSwitch.GameModeSwitch;
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.DeviceSettings;
+import org.aosp.device.DeviceSettings.ModeSwitch.GameModeSwitch;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 @TargetApi(24)
 public class GameModeTileService extends TileService {

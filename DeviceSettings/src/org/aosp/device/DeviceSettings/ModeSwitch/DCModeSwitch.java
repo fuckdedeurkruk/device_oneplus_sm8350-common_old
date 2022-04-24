@@ -15,15 +15,15 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.ModeSwitch;
+package org.aosp.device.DeviceSettings.ModeSwitch;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
-import org.lineageos.device.DeviceSettings.DeviceSettings;
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.DeviceSettings;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 public class DCModeSwitch implements OnPreferenceChangeListener {
 

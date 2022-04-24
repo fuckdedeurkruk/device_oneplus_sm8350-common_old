@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.lineageos.device.DeviceSettings;
+package org.aosp.device.DeviceSettings;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import org.lineageos.device.DeviceSettings.R;
+import org.aosp.device.DeviceSettings.R;
 
 public abstract class SuTask<Params> extends AsyncTask<Params, Void, Boolean> {
     private Context mContext;

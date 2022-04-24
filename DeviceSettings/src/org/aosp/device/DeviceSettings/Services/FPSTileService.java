@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.app.ActivityManager;
 import android.content.Intent;
@@ -38,7 +38,7 @@ public class FPSTileService extends TileService {
               (ActivityManager) getSystemService(this.ACTIVITY_SERVICE);
       for (ActivityManager.RunningServiceInfo service :
               manager.getRunningServices(Integer.MAX_VALUE)) {
-          if (org.lineageos.device.DeviceSettings.Services.FPSInfoService.class.getName().equals(
+          if (org.aosp.device.DeviceSettings.Services.FPSInfoService.class.getName().equals(
                   service.service.getClassName())) {
               isShowing = true;
           }
@@ -48,7 +48,7 @@ public class FPSTileService extends TileService {
 
   @Override
   public void onClick() {
-      Intent fpsinfo = new Intent(this, org.lineageos.device.DeviceSettings.Services.FPSInfoService.class);
+      Intent fpsinfo = new Intent(this, org.aosp.device.DeviceSettings.Services.FPSInfoService.class);
       if (!isShowing)
           this.startService(fpsinfo);
       else

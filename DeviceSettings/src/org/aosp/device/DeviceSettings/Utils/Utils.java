@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Utils;
+package org.aosp.device.DeviceSettings.Utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -28,8 +28,8 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-import org.lineageos.device.DeviceSettings.DeviceSettings;
-import org.lineageos.device.DeviceSettings.Services.AutoHBMService;
+import org.aosp.device.DeviceSettings.DeviceSettings;
+import org.aosp.device.DeviceSettings.Services.AutoHBMService;
 
 public class Utils {
 
@@ -102,8 +102,8 @@ public class Utils {
             br = new BufferedReader(new FileReader(filename), 1024);
             line = br.readLine();
 			if (line != null) {
-                line = line.replaceAll(".+= ", "");
-            }			
+            line = line.replaceAll(".+= ", "");
+            }
         } catch (IOException e) {
             return null;
         } finally {
@@ -120,7 +120,7 @@ public class Utils {
 
     public static boolean getFileValueAsBoolean(String filename, boolean defValue) {
         String fileValue = readLine(filename);
-        if (fileValue != null) {
+        if(fileValue!=null){
             return (fileValue.equals("0")?false:true);
         }
         return defValue;
@@ -128,7 +128,7 @@ public class Utils {
 
     public static String getFileValue(String filename, String defValue) {
         String fileValue = readLine(filename);
-        if (fileValue != null) {
+        if(fileValue!=null){
             return fileValue;
         }
         return defValue;

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016-2019 crDroid Android Project
- * Copyright (C) 2020 lineageos-OS
+ * Copyright (C) 2020 aosp-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  * limitations under the License
  */
 
-package org.lineageos.device.DeviceSettings.Preference;
+package org.aosp.device.DeviceSettings.Preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -34,8 +34,8 @@ import android.widget.Toast;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.*;
 
-import org.lineageos.device.DeviceSettings.R;
-import org.lineageos.device.DeviceSettings.Utils.VibrationUtils;
+import org.aosp.device.DeviceSettings.R;
+import org.aosp.device.DeviceSettings.Utils.VibrationUtils;
 
 public class CustomSeekBarPreference extends Preference implements SeekBar.OnSeekBarChangeListener,
         View.OnClickListener, View.OnLongClickListener {

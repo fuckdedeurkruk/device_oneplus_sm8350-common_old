@@ -15,11 +15,11 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.ModeSwitch;
+package org.aosp.device.DeviceSettings.ModeSwitch;
 
 import android.content.Context;
 
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 public class HBMModeSwitch {
 

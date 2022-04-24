@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
@@ -25,8 +25,8 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 @TargetApi(24)
 public class HBMModeTileService extends TileService {
@@ -68,7 +68,7 @@ public class HBMModeTileService extends TileService {
         Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "0" : "5");
         if (!enabled) {
             mHbmIntent = new Intent(this,
-                    org.lineageos.device.DeviceSettings.Services.HBMModeService.class);
+                    org.aosp.device.DeviceSettings.Services.HBMModeService.class);
             this.startService(mHbmIntent);
         }
         updateState();

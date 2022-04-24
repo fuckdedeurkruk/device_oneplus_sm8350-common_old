@@ -1,4 +1,4 @@
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.app.KeyguardManager;
 import android.app.Service;
@@ -15,8 +15,8 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.device.DeviceSettings.Utils.Utils;
-import org.lineageos.device.DeviceSettings.DeviceSettings;
+import org.aosp.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.DeviceSettings;
 
 public class AutoHBMService extends Service {
     private static final String HBM_FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";

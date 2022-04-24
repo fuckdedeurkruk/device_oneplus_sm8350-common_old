@@ -8,3 +8,5 @@ allow priv_app vendor_hal_camera_postproc_hwservice:hwservice_manager find;
 allow priv_app property_socket:sock_file { read write open };
 allow priv_app hal_camera_default:binder { call };
 binder_call(priv_app, hal_ifaa_default)
+
+allow priv_app zygote:unix_stream_socket getopt;

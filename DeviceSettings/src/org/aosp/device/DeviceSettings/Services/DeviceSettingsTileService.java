@@ -15,13 +15,13 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings.Services;
+package org.aosp.device.DeviceSettings.Services;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.service.quicksettings.TileService;
 
-import org.lineageos.device.DeviceSettings.DeviceSettingsActivity;
+import org.aosp.device.DeviceSettings.DeviceSettingsActivity;
 
 @TargetApi(24)
 public class DeviceSettingsTileService extends TileService {

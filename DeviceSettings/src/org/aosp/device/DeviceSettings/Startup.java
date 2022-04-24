@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.device.DeviceSettings;
+package org.aosp.device.DeviceSettings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -24,10 +24,10 @@ import android.content.SharedPreferences;
 import android.provider.Settings;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.device.DeviceSettings.Doze.DozeUtils;
-import org.lineageos.device.DeviceSettings.ModeSwitch.*;
-import org.lineageos.device.DeviceSettings.Services.FPSInfoService;
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.Doze.DozeUtils;
+import org.aosp.device.DeviceSettings.ModeSwitch.*;
+import org.aosp.device.DeviceSettings.Services.FPSInfoService;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 public class Startup extends BroadcastReceiver {
 

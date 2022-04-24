@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 lineageos-OS
+ * Copyright (C) 2021 aosp-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.lineageos.device.DeviceSettings.ModeSwitch;
+package org.aosp.device.DeviceSettings.ModeSwitch;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
-import org.lineageos.device.DeviceSettings.Utils.Utils;
+import org.aosp.device.DeviceSettings.Utils.Utils;
 
 public class EdgeTouchSwitch implements OnPreferenceChangeListener {
 
