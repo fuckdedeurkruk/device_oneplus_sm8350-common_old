@@ -12,7 +12,7 @@ switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT :=
 before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
 
 fix devicesettings and deviceextras
-fix fingerprint location
+fix fingerprint location intro overlay
 fix color settings intro overlay
 
 mby switch to arter kernel?
