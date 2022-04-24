@@ -137,7 +137,11 @@ system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 # Camera
 odm/lib64/camera/com.qti.sensor.imx481.so
 odm/lib64/camera/com.qti.sensor.s5k3m5.so
+system/lib64/libhwui.so
+system/lib64/libaudioflinger.so
+system/lib/libcameraservice.so
 system_ext/lib64/libCameraMDMHelper.so
+system_ext/lib64/libsmomo.qti.so
 system_ext/lib64/libopcameralib-em.so
 system_ext/lib64/vendor.oneplus.hardware.camera@1.0.so
 system_ext/lib64/vendor.oneplus.hardware.camera@1.0-adapter-helper.so
