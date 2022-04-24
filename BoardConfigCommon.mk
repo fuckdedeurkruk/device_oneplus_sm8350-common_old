@@ -48,6 +48,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
+androidboot.selinux=permissive \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
@@ -137,6 +138,7 @@ TARGET_USE_QTI_BT_STACK := true
 
 # Camera
 TARGET_CAMERA_NEEDS_CLIENT_INFO := true
+TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 CAMERA_NEEDS_CLIENT_INFO := true

@@ -135,6 +135,8 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
+odm/lib64/camera/com.qti.sensor.imx481.so
+odm/lib64/camera/com.qti.sensor.s5k3m5.so
 system_ext/lib64/libCameraMDMHelper.so
 system_ext/lib64/libopcameralib-em.so
 system_ext/lib64/vendor.oneplus.hardware.camera@1.0.so
@@ -185,10 +187,13 @@ vendor/lib64/libAlgoProcess.so
 vendor/lib64/libCOppLceTonemapAPI.so
 vendor/lib64/libDeVIS.so
 vendor/lib64/libEIS.so
+vendor/lib64/libFaceBeautyCap.so
+vendor/lib64/libFaceBeautyPre.so
 vendor/lib64/libOGLManager.so
 vendor/lib64/libOPLUS_SCPortrait.so
 vendor/lib64/libPerfectlyClearCrux.so
 vendor/lib64/libPerfectlyClearCruxOpt.so
+vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libPolarrRender.so
 vendor/lib64/libPreviewAlgo.dummy.so
 vendor/lib64/libPreviewAlgo.edgefilter.so
@@ -291,6 +296,7 @@ vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcvface_api.so
+vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/libdehaze.so
 vendor/lib64/libdualcam_optical_zoom_control.so
 vendor/lib64/libdualcam_video_optical_zoom.so
