@@ -1,7 +1,7 @@
 add ooscam - not yet tested bqs wrong ooscam apk
 add dolby - working great
-add devicesettings - the most works (fixe touchgestures nexttime) or remove them
-add deviceextras - everything works exept kcal and fastcharge 2.0 add nexttime intro kernel
+add devicesettings - the most works (fixe touchgestures and vib nexttime) or remove them
+add deviceextras - everything works exept kcal, fastcharge 2.0 and vib add nexttime intro kernel
 add vbmeta_vendor and update avb
 build with trb_clang 15
 rebased tree with allot of shit from deffrent devs
@@ -9,11 +9,11 @@ rebased tree with allot of shit from deffrent devs
 todo 
 
 switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true ?  
-before doing this i need to learn more homework https://source.android.com/devices/bootloader/partitions/generic-boot
+before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
 
 fix devicesettings and deviceextras
 fix fingerprint location
-fix color settings intro overly
+fix color settings intro overlay
 
 mby switch to arter kernel?
 
