@@ -1,0 +1,17 @@
+add ooscam - not yet tested bqs wrong ooscam apk
+add dolby - working great
+add devicesettings - the most works (fixe touchgestures nexttime) or remove them
+add deviceextras - everything works exept kcal and fastcharge 2.0 add nexttime intro kernel
+add vbmeta_vendor and update avb
+build with trb_clang 15
+rebased tree with allot of shit from deffrent devs
+
+todo 
+
+switch recovery to vendor_boot
+fix devicesettings and deviceextras
+fix fingerprint location
+fix color settings intro overly
+
+mby switch to arter kernel?
+
