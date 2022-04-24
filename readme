@@ -8,7 +8,7 @@ rebased tree with allot of shit from deffrent devs
 
 todo 
 
-switch recovery to vendor_boot
+switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true ?
 fix devicesettings and deviceextras
 fix fingerprint location
 fix color settings intro overly
