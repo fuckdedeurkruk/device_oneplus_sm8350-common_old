@@ -1,9 +1,10 @@
-add ooscam - not yet tested bqs wrong ooscam apk
+add ooscam - not working atm ask dev for commits? need to test some changes in next build!
 add dolby - working great
-add devicesettings - the most works (fixe touchgestures and vib nexttime) or remove them
-add deviceextras - everything works exept kcal, fastcharge 2.0 and vib add nexttime intro kernel
-add vbmeta_vendor and update avb
-build with trb_clang 15
+add devicesettings - the most works (fixe touchgestures and vib nexttime) or remove them bqs extras have them also
+add deviceextras - working
+add vbmeta_vendor and update avb - done
+switch to kryo 785 dotprot - done, adapt evo tree for it
+build with trb_clang 15 - done
 rebased tree with allot of shit from deffrent devs
 
 todo 
@@ -11,9 +12,10 @@ todo
 switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true ?  
 before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
 
-fix devicesettings and deviceextras
+fix devicesettings
 fix fingerprint location intro overlay
 fix color settings intro overlay
+bluetooth doesn't work(sometimes) - test cleanup!
 
-mby switch to arter kernel?
+mby switch to arter kernel if nothing works, ask dev for it?
 
