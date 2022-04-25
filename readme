@@ -22,7 +22,7 @@ fix color settings intro overlay
 Fix bluetooth doesn't work(sometimes) - test cleanup! May revert cleanup and remove TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true ? 
 Fix ooscam thing is only promode should work. But mine doesn't work at all
 
-mby if all hope is lost switch to arter kernel, if the time id there ask dev if and howto?
+mby if all hope is lost switch to arter kernel, if the time is there ask dev if and howto?
 
 Crdroid kernel will boot but touch and charge doesn't work at all. Screen go's on and works but no touch. Dirtyflash arter kernel everyting works fine.
 Next week test latest crdroid kernel update. Atm not possible to flash only build.
