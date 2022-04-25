@@ -9,20 +9,23 @@ rebased tree with allot of shit from deffrent devs
 
 todo 
 
+Add oneplussettings from chandu
 Mby ship with some prebuild packages like gbwhatsapp or luckypatcher?
-Mby add prebuild recovery intro vendor_boot? 
 
+Mby add prebuild recovery intro vendor_boot? Idunno if thats work or not. Fist learn more about it.
 switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true ?  
 before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
 
 fix devicesettings
 fix fingerprint location intro overlay
 fix color settings intro overlay
-Fix bluetooth doesn't work(sometimes) - test cleanup!
+Fix bluetooth doesn't work(sometimes) - test cleanup! May revert cleanup and remove TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true ? 
 Fix ooscam thing is only promode should work. But mine doesn't work at all
 
 mby if all hope is lost switch to arter kernel, if the time id there ask dev if and howto?
 
 Crdroid kernel will boot but touch and charge doesn't work at all. Screen go's on and works but no touch. Dirtyflash arter kernel everyting works fine.
-Next week test latest crdroid kernel update. Atm not possible to flash only build. 
+Next week test latest crdroid kernel update. Atm not possible to flash only build.
+
+All commits with test at the end may broke things idunno if things failed keep in mined to revert some of them 
 
