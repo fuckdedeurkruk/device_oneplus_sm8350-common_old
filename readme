@@ -1,6 +1,6 @@
 add ooscam - not working atm, need to test some changes in next build! Dev say only promode
 add dolby - working great
-add devicesettings - the most works (fixe touchgestures and vib nexttime) or remove them bqs extras have them also
+add devicesettings - the most works (fixe touchgestures and vib nexttime) remove them bqs extras have them also
 add deviceextras - working
 add vbmeta_vendor and update avb - done
 switch to kryo 785 dotprot - done, adapt evo tree for it
