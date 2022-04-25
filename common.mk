@@ -452,6 +452,10 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libstagefrighthw
+
+# OnePlusSettings
+PRODUCT_PACKAGES += \
+    OnePlusSettings
     
 # OnePlus
 PRODUCT_PACKAGES += \
@@ -460,7 +464,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oneplus-fwk    
 
-# OnePlus Apps
+# OnePlus Packages Overlays
 PRODUCT_PACKAGES += \
     OnePlusCameraOverlay \
     OnePlusGalleryOverlay
