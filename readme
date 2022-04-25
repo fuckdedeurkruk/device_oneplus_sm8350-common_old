@@ -1,4 +1,4 @@
-add ooscam - not working atm ask dev for commits? need to test some changes in next build!
+add ooscam - not working atm, need to test some changes in next build! Dev say only promode
 add dolby - working great
 add devicesettings - the most works (fixe touchgestures and vib nexttime) or remove them bqs extras have them also
 add deviceextras - working
@@ -15,9 +15,10 @@ before doing this i need to learn more about it #homework https://source.android
 fix devicesettings
 fix fingerprint location intro overlay
 fix color settings intro overlay
-bluetooth doesn't work(sometimes) - test cleanup!
+Fix bluetooth doesn't work(sometimes) - test cleanup!
+Fix ooscam thing is only promode should work. But mine doesn't work at all
 
-mby switch to arter kernel if nothing works, ask dev for it?
+mby if all hope is lost switch to arter kernel, ask dev if and howto?
 
 Crdroid kernel will boot but touch and charge doesn't work at all. Screen go's on and works but no touch. Dirtyflash arter kernel everyting works fine.
 
