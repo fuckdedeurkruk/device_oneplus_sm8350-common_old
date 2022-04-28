@@ -18,10 +18,13 @@ switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT :=
 before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
 
 fix devicesettings
-fix fingerprint location intro overlay
+fix notitication place on lockscreen. Now notification go intro te same place as fingerprint location
 fix color settings intro overlay
 Fix bluetooth doesn't work(sometimes) - test cleanup! May revert cleanup and remove TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true ? 
 Fix ooscam thing is only promode should work. But mine doesn't work at all
+Rename google wifioverlay
+
+
 
 mby if all hope is lost switch to arter kernel, if the time is there ask dev if and howto?
 
