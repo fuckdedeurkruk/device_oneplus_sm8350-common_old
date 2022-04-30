@@ -17,7 +17,7 @@ Mby add prebuild recovery intro vendor_boot? Idunno if thats work or not. Fist l
 switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true ?  
 before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
 
-fix devicesettings
+nuke devicesettings
 fix notitication place on lockscreen. Now notification go intro te same place as fingerprint location
 Fix bluetooth doesn't work(sometimes) - test cleanup! May revert cleanup and remove TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true ? 
 Fix ooscam thing is only promode should work. But mine doesn't work at all
