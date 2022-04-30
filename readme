@@ -10,19 +10,19 @@ rebased tree with allot of shit from deffrent devs
 todo 
 
 Addback chrgcontrol - fix shared libs first.
-Add oneplussettings from chandu
 Mby ship with some prebuild packages like gbwhatsapp or luckypatcher?
 
-Mby add prebuild recovery intro vendor_boot? Idunno if thats work or not. Fist learn more about it.
-switch recovery to vendor_boot - BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true ?  
-before doing this i need to learn more about it #homework https://source.android.com/devices/bootloader/partitions/generic-boot
-
 nuke devicesettings
-fix notitication place on lockscreen. Now notification go intro te same place as fingerprint location
+Fix notitication place on lockscreen. Now notification go intro te same place as fingerprint location
 Fix bluetooth doesn't work(sometimes) - test cleanup! May revert cleanup and remove TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true ? 
 Fix ooscam thing is only promode should work. But mine doesn't work at all
 
-mby if all hope is lost switch to arter kernel, if the time is there ask dev if and howto?
+Adapt cr kernel to latest clang 15, tons of errors - exsample= error: a function declaration without a prototype is deprecated in al
+l versions of C [-Werror,-Wstrict-prototypes]
+struct ce_ops *ce_services_srng()
+                               ^
+                                void
+1 error generated.
 
 Crdroid kernel will boot but touch and charge doesn't work at all. Screen go's on and works but no touch. Dirtyflash arter kernel everyting works fine.
 Next week test latest crdroid kernel update. Atm not possible to flash only build.
