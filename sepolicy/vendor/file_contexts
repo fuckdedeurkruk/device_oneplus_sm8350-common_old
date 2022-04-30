@@ -211,6 +211,7 @@
 /sys/devices(/platform)?/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen.[0-9]+.Audio.Service/wakeup(/.*)?      u:object_r:sysfs_wakeup:s0
 
 # Touchpanel
+/proc/touchpanel/game_switch_enable         u:object_r:proc_touchpanel:s0
 /proc/touchpanel/tpedge_limit_enable        u:object_r:proc_touchpanel:s0
 
 # Vibrator

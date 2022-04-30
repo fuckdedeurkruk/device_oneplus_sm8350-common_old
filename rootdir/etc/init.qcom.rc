@@ -89,7 +89,7 @@ on init
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
-     # Vibration
+    # Vibration
     chown system system /sys/devices/platform/soc/88c000.i2c/i2c-10/10-005a/leds/vibrator/level
 
 on early-boot

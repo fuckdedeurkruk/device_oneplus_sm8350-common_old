@@ -464,6 +464,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oneplus-fwk    
 
+# OnePlusSettings
+PRODUCT_PACKAGES += \
+    OnePlusSettings
+
 # OnePlus Packages Overlays
 PRODUCT_PACKAGES += \
     OnePlusCameraOverlay \
@@ -556,6 +560,7 @@ PRODUCT_PACKAGES += \
 # tri-state-key
 PRODUCT_PACKAGES += \
     tri-state-key_daemon.vendor
+    tri-state-key_daemon
 
 # Update engine
 PRODUCT_PACKAGES += \
