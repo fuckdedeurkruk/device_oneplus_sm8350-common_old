@@ -69,14 +69,14 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-trb
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-neutron
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
     LLVM=1
     
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8350
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := trb_clang
+TARGET_KERNEL_CLANG_VERSION := neutron
 TARGET_KERNEL_CONFIG := evo_defconfig
 
 # Kernel modules
