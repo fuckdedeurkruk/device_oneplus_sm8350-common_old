@@ -250,10 +250,6 @@ PRODUCT_PACKAGES += \
     vendor.oem_ftm_svc_disable.rc \
     vendor_modprobe.sh
 
-# DeviceSettings
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform \
@@ -452,10 +448,6 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libstagefrighthw
-
-# OnePlusSettings
-PRODUCT_PACKAGES += \
-    OnePlusSettings
     
 # OnePlus
 PRODUCT_PACKAGES += \
