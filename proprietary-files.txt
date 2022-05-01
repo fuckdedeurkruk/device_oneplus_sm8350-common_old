@@ -759,13 +759,8 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
-
-# IFAA
--system_ext/priv-app/IFAAService/IFAAService.apk;PRESIGNED
-vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
-vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
-vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
+# IMS - from sake - 31.1010.0410.43
+-system_ext/priv-app/ims/ims.apk|1ad396eb63e145a636309de191cd267251b6ce6a
 
 # IMS (system) - from LA.QSSI.11.0.r1-10400-qssi.0
 system_ext/lib64/lib-imsvideocodec.so|5aed0217e9735d15e44ea6b9f397075a9b569614
@@ -815,8 +810,12 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|6cf6e534590ccd2090f6ea4881bedf26e24
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|f693eafe5bb3aefb731d57b084da914b318539d9
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|26df2c5ff42d58456ebcd0fd7d0ba51f56a3f390
 
-# IMS - from sake - 31.1010.0410.43
--system_ext/priv-app/ims/ims.apk|1ad396eb63e145a636309de191cd267251b6ce6a
+
+# IFAA
+-system_ext/priv-app/IFAAService/IFAAService.apk;PRESIGNED
+vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
+vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
+vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
 
 # IMS-Stock (vendor)
 vendor/bin/imsdaemon
