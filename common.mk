@@ -478,9 +478,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.oneplus
 
-# SoC
-PROCESSOR_MODEL := SM8350
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -552,7 +549,6 @@ PRODUCT_PACKAGES += \
 # tri-state-key
 PRODUCT_PACKAGES += \
     tri-state-key_daemon.vendor
-    tri-state-key_daemon
 
 # Update engine
 PRODUCT_PACKAGES += \
