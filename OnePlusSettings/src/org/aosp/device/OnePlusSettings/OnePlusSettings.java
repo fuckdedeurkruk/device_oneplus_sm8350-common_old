@@ -165,7 +165,7 @@ public class OnePlusSettings extends PreferenceFragment
         mNrModeSwitcher = (ListPreference) findPreference(KEY_NR_MODE_SWITCHER);
         mNrModeSwitcher.setOnPreferenceChangeListener(this);
 
-        mGameModeSwitch = (SwitchPreference) findPreference(KEY_GAME_SWITCH);
+       mGameModeSwitch = (SwitchPreference) findPreference(KEY_GAME_SWITCH);
         if (GameModeSwitch.isSupported()) {
             mGameModeSwitch.setEnabled(true);
         } else {
