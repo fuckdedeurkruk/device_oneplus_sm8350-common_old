@@ -160,6 +160,13 @@
 # FPS Info
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps         u:object_r:sysfs_dm:s0
 
+# Media
+/vendor/bin/hw/dolbycodec2                           u:object_r:mediacodec_exec:s0
+
+# Thermal
+/data/vendor/thermal(/.*)?                           u:object_r:thermal_data_file:s0
+/vendor/bin/mi_thermald                              u:object_r:mi_thermald_exec:s0
+
 # OP1, OP2 files
 /mnt/vendor/op1(/.*)?    u:object_r:op1_file:s0
 /mnt/vendor/op2(/.*)?    u:object_r:op2_file:s0
