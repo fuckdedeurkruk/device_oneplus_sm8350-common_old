@@ -11,6 +11,10 @@ persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.bt.a2dp.hal.implementation=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 
+# Blur
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+
 # Codec2 for audio and OMX for Video
 debug.stagefright.ccodec=1
 
