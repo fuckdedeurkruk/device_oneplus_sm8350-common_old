@@ -286,6 +286,46 @@ on boot
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
 
+    # Game Mode
+    chown system system /proc/touchpanel/game_switch_enable
+    chmod 0666 /proc/touchpanel/game_switch_enable
+
+    # High Brightness Mode
+    chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm
+    chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm
+
+    # Kcal
+    chown system graphics /sys/module/msm_drm/parameters/kcal_red
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_red
+    chown system graphics /sys/module/msm_drm/parameters/kcal_green
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_green
+    chown system graphics /sys/module/msm_drm/parameters/kcal_blue
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_blue
+    chown system graphics /sys/module/msm_drm/parameters/kcal_sat
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_sat
+    chown system graphics /sys/module/msm_drm/parameters/kcal_hue
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_hue
+    chown system graphics /sys/module/msm_drm/parameters/kcal_val
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_val
+    chown system graphics /sys/module/msm_drm/parameters/kcal_cont
+    chmod 0666 /sys/module/msm_drm/parameters/kcal_cont
+
+    # Measured FPS
+    chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
+    chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
+
+    # PowerShare
+    chown system system /sys/class/oplus_chg/wireless/trx_online
+    chmod 0666 /sys/class/oplus_chg/wireless/trx_online
+
+    # TP-edge limit 
+    chown system system /proc/touchpanel/tpedge_limit_enable
+    chmod 0666 /proc/touchpanel/tpedge_limit_enable
+
+    # Tri-state-key
+    chown system system /sys/devices/platform/soc/soc:tri_state_key/tri_state
+    chmod 0666 /sys/devices/platform/soc/soc:tri_state_key/tri_state
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
