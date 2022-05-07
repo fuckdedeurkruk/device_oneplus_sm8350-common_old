@@ -762,6 +762,7 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
 
 # IFAA
+-system_ext/priv-app/IFAAService/IFAAService.apk;PRESIGNED
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
 vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
 vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
