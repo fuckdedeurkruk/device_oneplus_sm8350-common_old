@@ -14,9 +14,6 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 # Codec2 for audio and OMX for Video
 debug.stagefright.ccodec=1
 
-# Codec2 for audio and OMX for Video
-debug.stagefright.ccodec=1
-
 # Camera
 camera.disable_zsl_mode=true
 persist.camera.assert.panic=true
@@ -48,9 +45,6 @@ debug.cpurend.vsync=false
 
 # Fingerprint
 vendor.boot.fingerprintbstate=orange
-
-# Codec2 for audio and OMX for Video
-debug.stagefright.ccodec=1
 
 # IMS
 persist.dbg.volte_avail_ovr=1
