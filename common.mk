@@ -331,6 +331,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oneplus \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+    
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService    
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
