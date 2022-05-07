@@ -35,6 +35,9 @@ $(call inherit-product, vendor/oneplus/sm8350-common/sm8350-common-vendor.mk)
 # Inherit OnePlusCamera from vendor/oneplus/addons/camera
 $(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
 
+#Inherit ThemeIcons
+$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -397,6 +400,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    android.hardware.keymaster@4.1 \
    android.hardware.keymaster@4.1.vendor
+   
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.1-service.oneplus
 
 # Media
 PRODUCT_COPY_FILES += \
