@@ -75,6 +75,7 @@ persist.vendor.qti.inputopts.movetouchslop=0.6
 
 # Netflix
 ro.netflix.bsp_rev=Q875-32408-1
+ro.product.model=star
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
