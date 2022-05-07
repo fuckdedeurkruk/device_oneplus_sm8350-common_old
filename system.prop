@@ -28,9 +28,6 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 # Charger
 ro.charger.disable_init_blank=true
 
-# Codec2 for audio and OMX for Video
-debug.stagefright.ccodec=1
-
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
@@ -78,7 +75,6 @@ persist.vendor.qti.inputopts.movetouchslop=0.6
 
 # Netflix
 ro.netflix.bsp_rev=Q875-32408-1
-ro.product.model=star
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
