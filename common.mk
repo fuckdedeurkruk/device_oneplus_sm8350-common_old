@@ -461,10 +461,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     OnePlusSettings
 
-# OnePlus Packages Overlays
-PRODUCT_PACKAGES += \
-    OnePlusGalleryOverlay
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
