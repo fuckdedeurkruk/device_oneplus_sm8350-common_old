@@ -1,2 +1,5 @@
+type hal_chargecontrol_default, domain;
+type hal_chargecontrol_default_exec, exec_type, vendor_file_type, file_type;
+
 allow hal_chargecontrol_default vendor_sysfs_battery_supply:file rw_file_perms;
 allow hal_chargecontrol_default vendor_sysfs_battery_supply:dir search;
