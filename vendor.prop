@@ -116,12 +116,6 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
-# Blur
-ro.launcher.blur.appLaunch=0
-persist.sys.sf.disable_blurs=1
-ro.surface_flinger.supports_background_blur=1
-ro.sf.blurs_are_expensive=1
-
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.oneplus.camera
 vendor.arcsoft.sn_isHardCopy=0
