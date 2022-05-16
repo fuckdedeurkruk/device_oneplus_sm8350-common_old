@@ -92,6 +92,9 @@ on post-fs
     # Vibration
     chown system system /sys/devices/platform/soc/88c000.i2c/i2c-10/10-005a/leds/vibrator/level
 
+    # Fingerprint notifiy press
+    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/notify_fppress
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
