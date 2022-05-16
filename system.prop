@@ -12,10 +12,9 @@ persist.vendor.bt.a2dp.hal.implementation=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Blur
-ro.launcher.blur.appLaunch=0
-ro.surface_flinger.supports_background_blur=0
-ro.sf.blurs_are_expensive=0
-persist.sysui.disableBlur=true
+ro.launcher.blur.appLaunch=1
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
 
 # Codec2 for audio and OMX for Video
 debug.stagefright.ccodec=1
