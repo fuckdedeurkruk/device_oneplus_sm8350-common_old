@@ -63,6 +63,7 @@ androidboot.selinux=permissive \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off
+    
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -154,7 +155,7 @@ TARGET_USES_QTI_MAPPER_2_0 := true
 TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 
 # Display Resolution
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 475
 TARGET_SCREEN_HEIGHT := 3216
 TARGET_SCREEN_WIDTH := 1440
 
