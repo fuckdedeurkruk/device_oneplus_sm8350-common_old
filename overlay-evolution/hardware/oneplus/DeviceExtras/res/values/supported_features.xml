@@ -52,4 +52,25 @@
 
     <!-- Whether device supports TP Edge Limit -->
     <bool name="config_deviceSupportsTPEdgeLimit">true</bool>
+
+    <!-- Whether device supports Panel Modes -->
+    <bool name="config_deviceSupportsPanelModes">true</bool>
+
+    <!-- Whether device supports Kcal -->
+    <bool name="config_deviceSupportsKcal">true</bool>
+
+    <!-- Whether device supports Earpiece gain -->
+    <bool name="config_deviceSupportsEarGain">true</bool>
+
+    <!-- Whether device supports Microphone gain -->
+    <bool name="config_deviceSupportsMicGain">true</bool>
+
+    <!-- Whether device supports OTG -->
+    <bool name="config_deviceSupportsOTG">true</bool>
+
+    <!-- Whether device supports Notifcation vibration intensity -->
+    <bool name="config_deviceSupportsNotifVib">true</bool>
+
+    <!-- Whether device supports Call vibration intensity -->
+    <bool name="config_deviceSupportsCallVib">true</bool>
 </resources>
