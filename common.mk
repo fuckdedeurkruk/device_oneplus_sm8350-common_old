@@ -312,9 +312,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
 
 # Dolby
+PRODUCT_PACKAGES += \
+    DolbyDaxUIOverlay
+    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml
-
+    
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
