@@ -16,9 +16,6 @@ ro.launcher.blur.appLaunch=1
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
 
-# Codec2 for audio and OMX for Video
-debug.stagefright.ccodec=1
-
 # Camera
 camera.disable_zsl_mode=true
 persist.camera.assert.panic=true
