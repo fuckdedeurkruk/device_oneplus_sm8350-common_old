@@ -12,3 +12,4 @@ allow init servicemanager:binder { call  transfer };
 allow init vendor_file:file { execute  execute_no_trans };
 allow init vendor_hal_perf_hwservice:hwservice_manager { find };
 allow init sysfs_graphics:file rw_file_perms;
+allow init adsprpcd_file:file mounton;
