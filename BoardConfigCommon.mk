@@ -63,6 +63,8 @@ androidboot.selinux=permissive \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    #androidboot.selinux=permissive
     
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
@@ -142,7 +144,7 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 CAMERA_NEEDS_CLIENT_INFO := true
 CAMERA_NEEDS_CLIENT_INFO_LIB := true
-TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
+#TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 
 # Display
 TARGET_USES_COLOR_METADATA := true
