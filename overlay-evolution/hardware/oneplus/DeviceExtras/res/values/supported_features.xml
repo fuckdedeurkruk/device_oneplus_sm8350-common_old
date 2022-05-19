@@ -37,6 +37,9 @@
 
     <!-- Whether device supports wireless PowerShare -->
     <bool name="config_deviceSupportsPowerShare">true</bool>
+    
+    <!-- Whether device supports wireless Charging -->
+    <bool name="config_deviceSupportsWirelessCharging">false</bool>
 
     <!-- Whether device supports USB2.0 Force Fastcharge -->
     <bool name="config_deviceSupportsUSB2FC">true</bool>
