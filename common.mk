@@ -216,6 +216,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
+    Snap \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Charge control
@@ -303,8 +304,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor   
-
+    vendor.qti.hardware.display.mapper@4.0.vendor
+    
 # DeviceExtras
 PRODUCT_PACKAGES += \
     DeviceExtras    
@@ -317,11 +318,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.4-service.clearkey
-
-# Dolby
-PRODUCT_PACKAGES += \
-    DolbyDaxUIOverlay
-    
+  
+# Dolby  
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml
 
@@ -601,7 +599,6 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # WiFi
 PRODUCT_PACKAGES += \
