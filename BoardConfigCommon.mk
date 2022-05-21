@@ -50,7 +50,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
-androidboot.selinux=permissive \
+    androidboot.selinux=permissive \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
@@ -143,6 +143,7 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 CAMERA_NEEDS_CLIENT_INFO := true
 CAMERA_NEEDS_CLIENT_INFO_LIB := true
+TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 
 # Display
 TARGET_USES_COLOR_METADATA := true
@@ -156,6 +157,7 @@ TARGET_USES_QTI_MAPPER_2_0 := true
 TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 
 # Display Resolution
+TARGET_SCREEN_DENSITY := 480
 TARGET_SCREEN_HEIGHT := 3216
 TARGET_SCREEN_WIDTH := 1440
 

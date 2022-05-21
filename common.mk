@@ -301,11 +301,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
-    
-# DeviceExtras
-PRODUCT_PACKAGES += \
-    DeviceExtras    
+    vendor.qti.hardware.display.mapper@4.0.vendor   
     
 # Doze
 PRODUCT_PACKAGES += \
@@ -319,10 +315,6 @@ PRODUCT_PACKAGES += \
 # Dolby  
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml
-
-# DeviceSettings
-PRODUCT_PACKAGES += \
-    DeviceSettings
 
 # fastbootd
 PRODUCT_PACKAGES += \
