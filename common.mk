@@ -279,6 +279,7 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libtinyxml \
+    libvulkan \
     gralloc.default \
     memtrack.default \
     vendor.display.config@1.0 \
@@ -449,6 +450,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2 \
     android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     com.gsma.services.nfc \
     QuickAccessWallet \
@@ -458,12 +460,15 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    init.qti.media.sh \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
     libstagefrighthw
     
 # OnePlus
@@ -521,16 +526,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oneplus
-    
-# Surface Flinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.has_HDR_display=true \
-    ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.use_color_management=true \
-    ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -579,6 +574,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
+    android.hardware.usb@1.2-service-qti \
     android.hardware.usb@1.3-service-qti
 
 # Vendor service manager
