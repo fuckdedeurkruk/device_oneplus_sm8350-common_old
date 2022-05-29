@@ -63,7 +63,6 @@ BOARD_KERNEL_CMDLINE := \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
     
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
