@@ -489,6 +489,10 @@ PRODUCT_BOOT_JARS += \
 # OnePlusSettings
 PRODUCT_PACKAGES += \
     OnePlusSettings
+    
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Power
 PRODUCT_PACKAGES += \

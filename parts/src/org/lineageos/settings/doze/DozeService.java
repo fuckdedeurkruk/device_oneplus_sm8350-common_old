@@ -1,0 +1,148 @@
+/*
+ * Copyright (C) 2015 The CyanogenMod Project
+ *               2017-2018 The LineageOS Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.lineageos.settings.doze;
+
+import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.os.IBinder;
+import android.util.Log;
+import androidx.preference.PreferenceManager;
+
+import org.lineageos.settings.display.DisplayNodes;
+import org.lineageos.settings.utils.FileUtils;
+
+public class DozeService extends Service {
+    private static final String TAG = "DozeService";
+    private static final boolean DEBUG = false;
+
+    private String DC_DIMMING_NODE;
+    private String DC_DIMMING_ENABLE_KEY;
+    private String HBM_NODE;
+    private String HBM_ENABLE_KEY;
+    private boolean enableDc;
+    private boolean enableHbm;
+
+    private AodSensor mAodSensor;
+    private ProximitySensor mProximitySensor;
+    private PickupSensor mPickupSensor;
+    private SharedPreferences sharedPrefs;
+
+    @Override
+    public void onCreate() {
+        if (DEBUG)
+            Log.d(TAG, "Creating service");
+        mAodSensor = new AodSensor(this);
+        mProximitySensor = new ProximitySensor(this);
+        mPickupSensor = new PickupSensor(this);
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        IntentFilter screenStateFilter = new IntentFilter();
+        screenStateFilter.addAction(Intent.ACTION_SCREEN_ON);
+        screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
+        registerReceiver(mScreenStateReceiver, screenStateFilter);
+
+        DC_DIMMING_ENABLE_KEY = DisplayNodes.getDcDimmingEnableKey();
+        DC_DIMMING_NODE = DisplayNodes.getDcDimmingNode();
+        HBM_ENABLE_KEY = DisplayNodes.getHbmEnableKey();
+        HBM_NODE = DisplayNodes.getHbmNode();
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        if (DEBUG)
+            Log.d(TAG, "Starting service");
+        return START_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        if (DEBUG)
+            Log.d(TAG, "Destroying service");
+        super.onDestroy();
+        this.unregisterReceiver(mScreenStateReceiver);
+        mProximitySensor.disable();
+        mPickupSensor.disable();
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
+    private void onDisplayOn() {
+        if (DEBUG)
+            Log.d(TAG, "Display on");
+        if (DozeUtils.isAlwaysOnEnabled(this)) {
+            DozeUtils.setDozeStatus(DozeUtils.DOZE_STATUS_DISABLED);
+        }
+        if (DozeUtils.isPickUpEnabled(this)) {
+            mPickupSensor.disable();
+        }
+        if (DozeUtils.isHandwaveGestureEnabled(this) || DozeUtils.isPocketGestureEnabled(this)) {
+            mProximitySensor.disable();
+        }
+        if (DozeUtils.isDozeAutoBrightnessEnabled(this)) {
+            mAodSensor.disable();
+        }
+        enableNode(true);
+    }
+
+    private void onDisplayOff() {
+        if (DEBUG)
+            Log.d(TAG, "Display off");
+        enableNode(false);
+        if (DozeUtils.isAlwaysOnEnabled(this)) {
+            DozeUtils.setDozeStatus(DozeUtils.DOZE_STATUS_ENABLED);
+        }
+        if (DozeUtils.isPickUpEnabled(this)) {
+            mPickupSensor.enable();
+        }
+        if (DozeUtils.isHandwaveGestureEnabled(this) || DozeUtils.isPocketGestureEnabled(this)) {
+            mProximitySensor.enable();
+        }
+        if (DozeUtils.isDozeAutoBrightnessEnabled(this)) {
+            mAodSensor.enable();
+        }
+    }
+
+    private void enableNode(boolean status) {
+        enableDc = (sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false));
+        enableHbm = (sharedPrefs.getBoolean(HBM_ENABLE_KEY, false));
+        if (enableDc) {
+            FileUtils.writeLine(DC_DIMMING_NODE, status ? "1" : "0");
+        }
+        if (enableHbm) {
+            FileUtils.writeLine(HBM_NODE, status ? "1" : "0");
+        }
+    }
+
+    private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
+                onDisplayOn();
+            } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+                onDisplayOff();
+            }
+        }
+    };
+}
