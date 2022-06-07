@@ -19,8 +19,8 @@
 
 <resources>
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_default">89px</dimen>
+    <dimen name="status_bar_height_default">138px</dimen>
 
     <!-- Height of the status bar in landscape -->
-    <dimen name="status_bar_height_landscape">136px</dimen>
+    <dimen name="status_bar_height_landscape">138px</dimen>
 </resources>
