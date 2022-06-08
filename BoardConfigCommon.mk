@@ -72,16 +72,25 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_KERNEL_CLANG_FLAGS += --prefix=$(GCC_TOOLCHAIN_DIR)$(notdir $(CROSS_COMPILE))
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-neutron
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
     LLVM=1 \
-    LLVM_IAS=1
+    LLVM_IAS=1 \
+    CC=clang \
+    AR=llvm-ar \
+    NM=llvm-nm \
+    OBJCOPY=llvm-objcopy \
+    OBJDUMP=llvm-objdump \
+    STRIP=llvm-strip
  
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8350
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := neutron
 TARGET_KERNEL_CONFIG := evo_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
@@ -159,11 +168,6 @@ TARGET_USES_ION := true
 TARGET_USES_QCOM_DISPLAY_BSP := true
 TARGET_USES_QTI_MAPPER_2_0 := true
 TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
-
-# Display Resolution
-TARGET_SCREEN_DENSITY := 480
-TARGET_SCREEN_HEIGHT := 3216
-TARGET_SCREEN_WIDTH := 1440
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
