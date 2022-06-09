@@ -83,14 +83,18 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     NM=llvm-nm \
     OBJCOPY=llvm-objcopy \
     OBJDUMP=llvm-objdump \
-    STRIP=llvm-strip
+    STRIP=llvm-strip \
+    AS=llvm-as \
+    LD=ld.lld
  
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8350
+KERNEL_SUPPORTS_LLVM_TOOLS := true
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := neutron
 TARGET_KERNEL_CONFIG := evo_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
+KERNEL_LD := LD=ld.lld
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
