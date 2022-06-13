@@ -16,11 +16,12 @@
 */
 -->
 <resources>
+    <!-- Height of the status bar -->
+    <dimen name="status_bar_height_default">138px</dimen>
+
+    <!-- Height of the status bar in landscape -->
+    <dimen name="status_bar_height_landscape">138px</dimen>
+
     <!-- Height of area above QQS where battery/time go -->
-    <dimen name="quick_qs_offset_height">132px</dimen>
-    <dimen name="status_bar_height">104px</dimen>
-    
-    <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
-         calculate the status bar height. -->
-    <dimen name="status_bar_height_default">@dimen/status_bar_height</dimen>
+    <dimen name="quick_qs_offset_height">130px</dimen>
 </resources>
