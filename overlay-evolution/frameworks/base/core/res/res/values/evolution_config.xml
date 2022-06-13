@@ -43,7 +43,7 @@
     <!-- Whether to disable Night Light feature during UDFPS unlock -->
     <bool name="config_udfpsDisableNightLight">true</bool>
 
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+   <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">"/sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/usb/fastchg_status"</string>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->

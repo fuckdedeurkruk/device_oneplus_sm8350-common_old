@@ -197,8 +197,9 @@ PRODUCT_SYSTEM_PROPERTIES += ro.launcher.blur.appLaunch=0
     
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
-    android.hardware.bluetooth@1.0.vendor \
+    liblacBT_bco \
+    android.hardware.bluetooth@1.1 \
+    android.hardware.bluetooth@1.1.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
@@ -265,49 +266,28 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V1-ndk_platform \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.graphics.allocator@3.0-impl \
-    android.hardware.graphics.allocator@4.0-impl \
-    android.hardware.graphics.composer@2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     init.qti.display_boot.sh \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
+    libdisplayconfig.system.qti \
     libmemutils \
     libqdMetaData \
+    libqdMetaData.system \
     libsdmcore \
     libsdmutils \
     libtinyxml \
-    libvulkan \
-    gralloc.default \
     memtrack.default \
     vendor.display.config@1.0 \
-    vendor.display.config@1.0.vendor \
-    vendor.display.config@1.1.vendor \
-    vendor.display.config@1.2.vendor \
-    vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor \
-    vendor.display.config@1.6.vendor \
-    vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@1.10.vendor \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@1.12.vendor \
-    vendor.display.config@1.13.vendor \
-    vendor.display.config@1.14.vendor \
     vendor.display.config@1.15.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.oneplus.hardware.display@1.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
@@ -442,7 +422,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail_vendor \
-    libavservices_minijail.vendor \
+    libavservices_minijail.vendor 
+
+# Codec2
+PRODUCT_PACKAGES += \
+    libcodec2_vndk.vendor \
     libcodec2_hidl@1.0.vendor
 
 # Net
@@ -562,6 +546,10 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
+    
+# Touchscreen
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Touch
 PRODUCT_PACKAGES += \
