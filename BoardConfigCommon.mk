@@ -168,6 +168,7 @@ CAMERA_NEEDS_CLIENT_INFO_LIB := true
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Dolby Vision
+TARGET_SUPPORTS_DOLBY_VISION := true
 SOONG_CONFIG_NAMESPACES += dolby_vision
 SOONG_CONFIG_dolby_vision += enabled
 SOONG_CONFIG_dolby_vision_enabled := true
