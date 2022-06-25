@@ -86,6 +86,9 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     STRIP=llvm-strip \
     AS=llvm-as \
     LD=ld.lld
+    
+TARGET_KERNEL_ADDITIONAL_FLAGS += \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument -O3"
  
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8350
 TARGET_KERNEL_CLANG_COMPILE := true

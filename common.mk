@@ -187,14 +187,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
     
-# Blur
-ro.launcher.blur.appLaunch=1
-ro.surface_flinger.supports_background_blur=1
-ro.sf.blurs_are_expensive=1
-ro.surface_flinger.wcg_composition_dataspace=143261696 \
-
-PRODUCT_SYSTEM_PROPERTIES += ro.launcher.blur.appLaunch=0
-    
 # Bluetooth
 PRODUCT_PACKAGES += \
     liblacBT_bco \
