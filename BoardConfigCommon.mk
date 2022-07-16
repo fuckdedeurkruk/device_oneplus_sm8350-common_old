@@ -197,7 +197,6 @@ HWUI_COMPILE_FOR_PERF := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8350
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
