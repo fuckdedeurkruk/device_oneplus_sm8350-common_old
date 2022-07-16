@@ -29,8 +29,17 @@
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
     <!-- Does the device have a notification led -->
-    <bool name="config_hasNotificationLed">false</bool>
+    <bool name="config_hasNotificationLed">true</bool>
+
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">true</bool>
 
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
+
+    <!-- Whether device has VOOC charging support -->
+    <bool name="config_hasVoocCharger">true</bool>
+    
+    <!-- Whether device has turbo power charging support -->
+    <bool name="config_hasTurboPowerCharger">true</bool>
 </resources>

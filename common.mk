@@ -45,6 +45,17 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-evolution
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    DeviceExtrasResCommon \
+    EvolutionFrameworksResCommon \
+    EvolutionSettingsProviderResCommon \
+    EvolutionSettingsResCommon \
+    EvolutionSystemUIResCommon \
+    FrameworksResTarget \
+    OPlusFrameworksResCommon \
+    OPlusSettingsResCommon \
+    WifiResTarget
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -116,6 +127,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
+    
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -476,19 +488,6 @@ PRODUCT_BOOT_JARS += \
 # OnePlusSettings
 PRODUCT_PACKAGES += \
     OnePlusSettings
-
-# Overlays
-PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    DeviceExtrasResCommon \
-    EvolutionFrameworksResCommon \
-    EvolutionSettingsProviderResCommon \
-    EvolutionSettingsResCommon \
-    EvolutionSystemUIResCommon \
-    FrameworksResTarget \
-    OPlusFrameworksResCommon \
-    OPlusSettingsResCommon \
-    WifiResTarget
 
 # Power
 PRODUCT_PACKAGES += \
