@@ -256,6 +256,15 @@ PRODUCT_PACKAGES += \
     vendor.oem_ftm_svc_disable.rc \
     vendor_modprobe.sh
 
+# DeviceExtras
+PRODUCT_PACKAGES += \
+    DeviceExtras \
+    tri-state-key-calibrate
+
+# Device ID attestation
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
@@ -465,6 +474,19 @@ PRODUCT_BOOT_JARS += \
 # OnePlusSettings
 PRODUCT_PACKAGES += \
     OnePlusSettings
+
+# Overlays
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    DeviceExtrasResCommon \
+    EvolutionFrameworksResCommon \
+    EvolutionSettingsProviderResCommon \
+    EvolutionSettingsResCommon \
+    EvolutionSystemUIResCommon \
+    FrameworksResTarget \
+    OPlusFrameworksResCommon \
+    OPlusSettingsResCommon \
+    WifiResTarget
 
 # Power
 PRODUCT_PACKAGES += \
