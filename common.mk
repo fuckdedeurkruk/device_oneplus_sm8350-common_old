@@ -47,7 +47,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    DeviceExtrasResCommon \
     EvolutionFrameworksResCommon \
     EvolutionSettingsProviderResCommon \
     EvolutionSettingsResCommon \
@@ -266,11 +265,6 @@ PRODUCT_PACKAGES += \
     vendor.oem_ftm.rc \
     vendor.oem_ftm_svc_disable.rc \
     vendor_modprobe.sh
-
-# DeviceExtras
-PRODUCT_PACKAGES += \
-    DeviceExtras \
-    tri-state-key-calibrate
 
 # Device ID attestation
 PRODUCT_COPY_FILES += \
