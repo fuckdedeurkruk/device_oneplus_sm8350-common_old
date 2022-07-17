@@ -186,6 +186,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/evolution/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+ODM_MANIFEST_FILES := $(COMMON_PATH)/manifest_odm.xml
     
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
