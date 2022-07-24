@@ -65,6 +65,11 @@ function blob_fixup() {
             ;;
         vendor/lib/libgf_ud_hal.so|vendor/lib/libgf_g6_ud_hal.so|vendor/lib64/libgf_ud_hal.so|vendor/lib64/libgf_g6_ud_hal.so)
             sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${2}"
+        vendor/etc/media_lahaina/video_system_specs.json)
+            sed -i "/max_retry_alloc_output_timeout/ s/1000/0/" "${2}"
+            ;;
+        vendor/lib/libgui1_vendor.so)
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v30.so" "${2}"
             ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             "${SIGSCAN}" -p "8C 0A 00 94" -P "1F 20 03 D5" -f "${2}"
