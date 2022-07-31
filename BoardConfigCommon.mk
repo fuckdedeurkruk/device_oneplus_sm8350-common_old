@@ -88,7 +88,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LD=ld.lld
     
 TARGET_KERNEL_ADDITIONAL_FLAGS += \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument -O3"
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument -O3 -Werror -Wenum-conversion -Wimplicit-int -Wunused-parameter -Wunknown-warning-option -Wno-unused-parameter -Wno-zero-length-array -Wno-sign-compare"
  
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8350
 TARGET_KERNEL_CLANG_COMPILE := true
